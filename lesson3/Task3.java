@@ -2,7 +2,6 @@
 // Поместить в него как строки, так и целые числа.
 // Пройти по списку, найти и удалить целые числа.
 
-
 package lesson3;
 
 import java.util.ArrayList;
@@ -29,6 +28,8 @@ public class Task3 {
             try {
                 n = Integer.parseInt(arrayList.get(i));
                 arrayList.remove(i);
+                i = i - 1;
+                length = length - 1;
             } catch (NumberFormatException e) {
                 System.out.println(arrayList.get(i) + " не является целым числом");
             }
