@@ -10,7 +10,6 @@ public class Task2 {
         Map<String, String> colleagues = new HashMap<>();
         Map<String, Integer> calculator = new TreeMap<>();
 
-
         colleagues.put("Иванов", "Иван");
         colleagues.put("Петрова", "Светлана");
         colleagues.put("Белова", "Кристина");
@@ -44,6 +43,6 @@ public class Task2 {
         }
 
         System.out.println("Рейтинг популярности имен:");
-            calculator.entrySet().stream().sorted(Map.Entry.<String, Integer>comparingByValue().reversed()).forEach(System.out::println);
+        calculator.entrySet().stream().sorted(Map.Entry.<String, Integer>comparingByValue().reversed()).forEach(System.out::println);
     }
 }
