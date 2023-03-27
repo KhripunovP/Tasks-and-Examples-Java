@@ -29,10 +29,10 @@ public class LaptopShop {
             while (flag) {
                 System.out.print("Выберите фильтр, который хотите применить:" + '\n' +
                         "Фирма" + '\n' +
-                        "Мазвание модели" + '\n' +
+                        "Мазвание_модели" + '\n' +
                         "Размер" + '\n' +
-                        "Объем оперативной памяти" + '\n' +
-                        "Объем памяти" + '\n' +
+                        "Объем_оперативной_памяти" + '\n' +
+                        "Объем_памяти" + '\n' +
                         "Процессор" + '\n' +
                         "Цвет" + '\n');
                 String user = input1.next();
@@ -54,7 +54,7 @@ public class LaptopShop {
                         }
                         break;
 
-                    case "Мазвание модели":
+                    case "Мазвание_модели":
                         System.out.print("Введите модель: ");
                         String userModel = input1.next();
                         ArrayList<Laptop> newModelList = new ArrayList<>();
@@ -86,7 +86,7 @@ public class LaptopShop {
                             }
                         }
                         break;
-                    case "Объем оперативной памяти":
+                    case "Объем_оперативной_памяти":
                         System.out.print("Введите ОЗУ: ");
                         String userRam = input1.next();
                         ArrayList<Laptop> newRamList = new ArrayList<>();
@@ -102,7 +102,7 @@ public class LaptopShop {
                             }
                         }
                         break;
-                    case "Объем памяти":
+                    case "Объем_памяти":
                         System.out.print("Введите ПЗУ: ");
                         String userRom = input1.next();
                         ArrayList<Laptop> newRomList = new ArrayList<>();
