@@ -9,14 +9,15 @@ public class FamilyTree {
         Scanner input1 = new Scanner(System.in);
         People father = new People("Иван_Васильевич_Смирнов", "мужской", 45, "Юрист", true, 1, 0, 0, 2);
         People mother = new People("Анна_Романовна_Смирнова", "женский", 38, "Врач", true, 1, 1, 0, 2);
-        People child1 = new People("Андрей_Иванович_Смирнов", "мужской", 14, "Школьник", false, 1, 0, 1, 0);
+        People child1 = new People("Андрей_Иванович_Смирнов", "мужской", 14, "Школьник", false, 2, 0, 1, 0);
         People child2 = new People("Мария_Ивановна_Смирнова", "женский", 10, "Школьница", false, 1, 1, 0, 0);
         People uncle = new People("Станислав_Романович_Анисимов", "мужской", 23, "Инженер", false, 0, 0, 1, 0);
-        Pets cat1 = new Pets("Кот", "Петруша", "мальчик", 5, "двор-кот");
+        Pets cat1 = new Cats("Кот", "Петруша", "мальчик", 5, "двор-кот");
+        Pets dog1 = new Dogs("Пёсель", "Патрик", "мальчик", 10, "Чау-чау");
         ArrayList<People> familyTree = new ArrayList<>();
         ArrayList<Pets> petsTree = new ArrayList<>();
         Collections.addAll(familyTree, father, mother, child1, child2, uncle);
-        Collections.addAll(petsTree, cat1);
+        Collections.addAll(petsTree, cat1, dog1);
 
         System.out.println("Добавим информацию о жене");
         father.setPartnerName(GetInfoForRelatives.getInfoForPartner(father.isMarried()));

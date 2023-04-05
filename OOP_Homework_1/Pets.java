@@ -1,6 +1,6 @@
 package OOP_Homework_1;
 
-public class Pets {
+public abstract class Pets {
     private  String TypePet;
     private String Name;
     private String sex;
@@ -9,7 +9,7 @@ public class Pets {
 
     @Override
     public String toString() {
-        return  "Котик или песель? - " + TypePet + '\n' +
+        return  "Котик или пёсель? - " + TypePet + '\n' +
                 "Кличка - " + Name + '\n' +
                 "Пол - " + sex + '\n' +
                 "Возраст - " + age + '\n' +
