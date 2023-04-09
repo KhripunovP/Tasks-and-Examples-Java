@@ -1,8 +1,8 @@
 package OOP_Homework_1;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
+import java.util.*;
+
+import static java.lang.Integer.parseInt;
 
 public class FamilyTree {
     public static void main(String[] args) {
@@ -18,7 +18,7 @@ public class FamilyTree {
         ArrayList<Pets> petsTree = new ArrayList<>();
         Collections.addAll(familyTree, father, mother, child1, child2, uncle);
         Collections.addAll(petsTree, cat1, dog1);
-
+/** Получение от пользователя информации о конкретном человеке и поиск в дереве совпадений */
         System.out.println("Добавим информацию о жене");
         father.setPartnerName(GetInfoForRelatives.getInfoForPartner(father.isMarried()));
         int count = 0;
@@ -32,7 +32,7 @@ public class FamilyTree {
         if (count == 0) {
             System.out.println("В семейном дереве о ней пока нет информации");
         }
-
+/** Получение от пользователя информации о человеке и поиск в дереве совпадений */
         System.out.println("Добавим информацию о детях");
         father.setChildName(GetInfoForRelatives.getInfoForRelatives(father.getCountChildren()));
         count = 0;
@@ -48,10 +48,10 @@ public class FamilyTree {
         if (count == 0) {
             System.out.println("В семейном дереве о детях пока нет подробной информации");
         }
-
+/** Вывод в консоль имеющейся информации о конкретном человеке */
         System.out.println("Дополненная инфа об отце");
         father.showInfo();
-
+/** Ввод информации о питомце */
         System.out.println("Добавим информацию о питомце");
         child1.setPetName(GetInfoForPets.getInfoForPets(child1.getCountPet()));
         count = 0;
@@ -67,6 +67,14 @@ public class FamilyTree {
         if (count == 0) {
             System.out.println("В базе о питомце пока нет информации");
         }
+
+/** Рассчет зарплаты в рублях дяди Станислава в зависимости от получаемой валюты */
+        Salary<String, Integer> salary = (n, m, x) -> ((n.contains(m)) ? (x * 89) : x);
+        System.out.println("Введите зарплату дяди Станислава с указанием валюты (к примеру: 10_евро)");
+        String answerUnit = input1.next();
+        ArrayList<String> findNum = new ArrayList<>(List.of(answerUnit.split("_"))) ;
+        Integer salFromUnit = parseInt(findNum.get(0));
+        System.out.println("Зарплата в рублях: " + salary.calculateSalary(answerUnit, "евро", salFromUnit));
     }
 }
 

@@ -1,5 +1,5 @@
 package OOP_Homework_1;
-
+/** Абстрактный класс домашних животных */
 public abstract class Pets {
     private  String TypePet;
     private String Name;
