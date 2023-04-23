@@ -23,8 +23,10 @@ public class TasksForHome extends Tasks {
     }
 
     /** Фильтр по критерию Приоритета задачи */
-    ArrayList<TasksForHome> choseMainTask2 (ArrayList<TasksForHome> list, ArrayList<TasksForHome> listHigh, TasksForHome obj) {
+
+    public ArrayList<TasksForHome> choseMainTask(ArrayList list, ArrayList listHigh) {
         for (int i = 0; i < list.size(); i++) {
+            TasksForHome obj = new TasksForHome("", "", "", "");
             obj = (TasksForHome) list.get(i);
             if (obj.getPriority().equals("High")) {
                 listHigh.add(list.get(i));

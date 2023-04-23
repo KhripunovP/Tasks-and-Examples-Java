@@ -11,10 +11,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Objects;
 
 /** Считывание изфайла эксель в ArrayList */
-public class ParserXls {
-    public static ArrayList<String> parse(String name) {
+public class ParserXls implements Parsing{
+    public static ArrayList<String> parse (String name) {
         ArrayList <String> result = new ArrayList<>();
         InputStream in = null;
         HSSFWorkbook wb = null;

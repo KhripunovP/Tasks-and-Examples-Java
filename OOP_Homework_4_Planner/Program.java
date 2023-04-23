@@ -19,7 +19,7 @@ public class Program {
         /** Применение фильтра по приоритету */
         System.out.println("Выведем важные задачи");
         ArrayList<TasksForHome> listHigh = new ArrayList<>();
-        forAdd2.choseMainTask2(fullTasksList, listHigh, forAdd2);
+        forAdd2.choseMainTask(fullTasksList, listHigh);
         for (int i = 0; i < listHigh.size(); i++) {
             listHigh.get(i).showInfo();
         }

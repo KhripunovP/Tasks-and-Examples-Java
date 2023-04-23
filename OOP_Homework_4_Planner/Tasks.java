@@ -2,7 +2,7 @@ package OOP_Homework_4_Planner;
 
 
 /** Описание и основные методы класса задач */
-public abstract class Tasks implements ActionsWithTasks {
+public abstract class Tasks implements ChoosingMainTask, MakingList {
     private String Name_task;
     private String Day;
     private String How_much_time;
