@@ -165,6 +165,7 @@ public class Toys implements addNewToys {
         return testObj;
     }
 
+    /** Запись в файл и исключение **/
     public void writingFile(Toys toy) {
         try (FileWriter writer = new FileWriter("src/WonToys.txt.txt", true)) {
             String text = toy.getName();
@@ -176,6 +177,7 @@ public class Toys implements addNewToys {
         }
     }
 
+    /** Чтение файла и исключение **/
     public void readingFile() {
         File file = new File("src/WonToys.txt.txt");
         try (FileReader reader = new FileReader(file)) {
