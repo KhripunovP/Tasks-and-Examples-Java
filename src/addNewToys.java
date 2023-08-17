@@ -1,4 +1,0 @@
-
-abstract interface addNewToys <V> {
-
-}
